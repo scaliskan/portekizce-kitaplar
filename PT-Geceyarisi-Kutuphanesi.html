@@ -4742,5 +4742,19 @@
     <p class="linktext"><span class="weblink"><a href="http://www.mynextread.de/redirect/Amazon+%28BR%29/3036000/9786558380634/9786558380313/c93d2be9cdce0a96db43f7bcdc116e65"><span class="underline">Compre agora e leia</span></a></span></p>
 </div>
 
+    <script>
+        // Save scroll position to localStorage before the page unloads
+        window.addEventListener("beforeunload", () => {
+            localStorage.setItem("scrollPosition", window.scrollY);
+        });
+
+        // Restore the scroll position when the page loads
+        window.addEventListener("load", () => {
+            const savedPosition = localStorage.getItem("scrollPosition");
+            if (savedPosition) {
+                window.scrollTo(0, parseInt(savedPosition, 10));
+            }
+        });
+    </script>
 
 </body></html>
